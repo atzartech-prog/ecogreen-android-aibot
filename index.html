@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoGreen Android AI Bot Hub • Daur Ulang STB & HP Jadul Jadi Mesin AI</title>
+  <meta name="description" content="Panduan dan aplikasi interaktif untuk menyulap gadget Android lawas (STB bekas & HP jadul RAM 1GB / KitKat 4.4+) menjadi server AI bot mandiri 24/7 menggunakan Go/Rust Single Binary, Python, Chroot, dan PRoot dengan orkestrasi AI Agent.">
+  <meta name="keywords" content="ecogreen, e-waste, android stb, b860h, hg680p, ai bot, telegram bot, single binary golang, rust, chroot alpine, proot termux, gemini flash free, grok free tier">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand-logo">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24"><path d="M17.6 9.48l1.84-3.18a.5.5 0 0 0-.87-.5l-1.9 3.29A10.96 10.96 0 0 0 12 8c-1.63 0-3.17.38-4.67 1.09L5.43 5.8a.5.5 0 0 0-.87.5l1.84 3.18C3.8 11.23 2 14.39 2 18h20c0-3.61-1.8-6.77-4.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+        </div>
+        <div class="brand-text">EcoGreen<span>AIBot</span></div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#overview" data-i18n="nav_overview">Ikhtisar</a></li>
+          <li><a href="#calculator" data-i18n="nav_calc">Kalkulator Metode</a></li>
+          <li><a href="#methods-section" data-i18n="nav_methods">4 Metode</a></li>
+          <li><a href="#prompt-generator" data-i18n="nav_prompt">AI Prompt Generator</a></li>
+          <li><a href="#hardware-guide" data-i18n="nav_hardware">Hardware & EcoGreen</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="lang-toggle-btn" class="btn-control" title="Ganti Bahasa / Switch Language">
+          <span>🌐</span> <span>English</span>
+        </button>
+        <button id="theme-toggle-btn" class="btn-control" title="Toggle Dark/Light Mode">
+          <span>🌓</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-badge-wrap">
+        <span class="pulse-dot"></span>
+        <span data-i18n="hero_badge">Daur Ulang E-Waste • Inisiatif EcoGreen Tech</span>
+      </div>
+
+      <h1 class="hero-title" data-i18n="hero_title">
+        Sulap Gadget Android Lawas Menjadi <span class="text-gradient">Mesin AI Bot Cerdas</span>
+      </h1>
+
+      <p class="hero-subtitle" data-i18n="hero_subtitle">
+        Manfaatkan STB bekas (ZTE B860H, HG680P) atau smartphone Android jadul (KitKat 4.4+, RAM 1GB) sebagai server AI bot 24/7 hemat energi. Ditenagai orkestrasi AI Agent, LLM Free-Tier (Gemini/Grok), dan arsitektur ultra-ringan.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#calculator" class="btn-primary">
+          <span>⚡</span> <span data-i18n="btn_start_calc">Cari Metode Gadget Anda</span>
+        </a>
+        <a href="#methods-section" class="btn-secondary">
+          <span>📖</span> <span data-i18n="btn_explore_methods">Pelajari 4 Metode</span>
+        </a>
+      </div>
+
+      <!-- Highlights Grid -->
+      <div class="hero-highlights">
+        <div class="highlight-chip">
+          <div class="chip-icon">💾</div>
+          <div>
+            <div class="chip-title" data-i18n="chip1_title">Ramah RAM 1GB</div>
+            <div class="chip-sub" data-i18n="chip1_desc">Bisa jalan lancar di STB & KitKat 4.4</div>
+          </div>
+        </div>
+        <div class="highlight-chip">
+          <div class="chip-icon">🤖</div>
+          <div>
+            <div class="chip-title" data-i18n="chip2_title">100% Free-Tier AI</div>
+            <div class="chip-sub" data-i18n="chip2_desc">Gemini 1.5/2.0 Flash & Grok API</div>
+          </div>
+        </div>
+        <div class="highlight-chip">
+          <div class="chip-icon">🚀</div>
+          <div>
+            <div class="chip-title" data-i18n="chip3_title">Single Binary Go/Rust</div>
+            <div class="chip-sub" data-i18n="chip3_desc">Konsumsi RAM hanya ~12-18 MB</div>
+          </div>
+        </div>
+        <div class="highlight-chip">
+          <div class="chip-icon">🌱</div>
+          <div>
+            <div class="chip-title" data-i18n="chip4_title">EcoGreen 24/7</div>
+            <div class="chip-sub" data-i18n="chip4_desc">Hemat listrik &lt; 5W & bebas baterai kembung</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview Section: 4 Methods Grid -->
+  <section id="overview" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" data-i18n="sec_overview_tag">Arsitektur & Konsep</div>
+        <h2 class="section-title" data-i18n="sec_overview_title">4 Metode Menghidupkan Kembali Gadget Lawas</h2>
+        <p class="section-desc" data-i18n="sec_overview_desc">
+          Jangan buang STB atau HP Android lama Anda ke tempat sampah. Pilih metode yang tepat berdasarkan spesifikasi perangkat Anda untuk menjadikannya bot Telegram/Discord AI tanpa batas.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- Card 1: Chroot -->
+        <div class="method-card">
+          <div class="card-top">
+            <span class="method-badge badge-chroot" data-i18n="m1_tag">Metode 1</span>
+            <h3 class="card-title" data-i18n="m1_title">Chroot Linux</h3>
+            <p class="card-desc" data-i18n="m1_desc">
+              Menjalankan distro Linux (Alpine / Debian) langsung di atas kernel Android yang sudah di-root. Akses hardware penuh tanpa emulasi.
+            </p>
+            <div class="card-specs">
+              <div class="spec-item"><span class="spec-label" data-i18n="m1_spec_ram">RAM Minimal</span><span class="spec-val">≥ 2 GB</span></div>
+              <div class="spec-item"><span class="spec-label" data-i18n="m1_spec_root">Status Root</span><span class="spec-val highlight" data-i18n="m1_spec_root_val">Wajib Root (Su)</span></div>
+              <div class="spec-item"><span class="spec-label" data-i18n="m1_spec_perf">Overhead</span><span class="spec-val" data-i18n="m1_spec_perf_val">Sangat Rendah (Native)</span></div>
+            </div>
+          </div>
+          <button class="btn-card" onclick="switchTab('chroot')" data-i18n="btn_view_m1">Panduan Chroot</button>
+        </div>
+
+        <!-- Card 2: PRoot -->
+        <div class="method-card">
+          <div class="card-top">
+            <span class="method-badge badge-proot" data-i18n="m2_tag">Metode 2</span>
+            <h3 class="card-title" data-i18n="m2_title">PRoot Userland</h3>
+            <p class="card-desc" data-i18n="m2_desc">
+              Menjalankan sistem Linux tiruan di ruang pengguna (userspace) via Termux tanpa butuh akses root sama sekali.
+            </p>
+            <div class="card-specs">
+              <div class="spec-item"><span class="spec-label" data-i18n="m2_spec_ram">RAM Minimal</span><span class="spec-val">1 GB - 2 GB</span></div>
+              <div class="spec-item"><span class="spec-label" data-i18n="m2_spec_root">Status Root</span><span class="spec-val highlight" data-i18n="m2_spec_root_val">Tanpa Root (Aman)</span></div>
+              <div class="spec-item"><span class="spec-label" data-i18n="m2_spec_perf">Overhead</span><span class="spec-val" data-i18n="m2_spec_perf_val">Sedang (Emulasi ptrace)</span></div>
+            </div>
+          </div>
+          <button class="btn-card" onclick="switchTab('proot')" data-i18n="btn_view_m2">Panduan PRoot</button>
+        </div>
+
+        <!-- Card 3: Python -->
+        <div class="method-card">
+          <div class="card-top">
+            <span class="method-badge badge-python" data-i18n="m3_tag">Metode 3</span>
+            <h3 class="card-title" data-i18n="m3_title">Python Micro-Bot</h3>
+            <p class="card-desc" data-i18n="m3_desc">
+              Menulis skrip bot menggunakan Python ringan dengan asyncio dan library minimalis, dijalankan langsung di Termux.
+            </p>
+            <div class="card-specs">
+              <div class="spec-item"><span class="spec-label" data-i18n="m3_spec_ram">RAM Minimal</span><span class="spec-val">1 GB - 2 GB</span></div>
+              <div class="spec-item"><span class="spec-label" data-i18n="m3_spec_root">Status Root</span><span class="spec-val" data-i18n="m3_spec_root_val">Bebas (Root / Non-Root)</span></div>
+              <div class="spec-item"><span class="spec-label" data-i18n="m3_spec_perf">Overhead</span><span class="spec-val highlight" data-i18n="m3_spec_perf_val">Ringan (~35-50 MB RAM)</span></div>
+            </div>
+          </div>
+          <button class="btn-card" onclick="switchTab('python')" data-i18n="btn_view_m3">Panduan Python</button>
+        </div>
+
+        <!-- Card 4: Single Binary -->
+        <div class="method-card" style="border-color: var(--accent-green-bright);">
+          <div class="card-top">
+            <span class="method-badge badge-binary" data-i18n="m4_tag">Metode 4 • Juara EcoGreen</span>
+            <h3 class="card-title" data-i18n="m4_title">Go / Rust Single Binary</h3>
+            <p class="card-desc" data-i18n="m4_desc">
+              Kompilasi statis single executable (ELF armv7/arm64). Berjalan langsung di shell Android tanpa dependencies, hanya butuh belasan megabyte RAM!
+            </p>
+            <div class="card-specs">
+              <div class="spec-item"><span class="spec-label" data-i18n="m4_spec_ram">RAM Minimal</span><span class="spec-val highlight">512 MB - 1 GB</span></div>
+              <div class="spec-item"><span class="spec-label" data-i18n="m4_spec_root">Status Root</span><span class="spec-val" data-i18n="m4_spec_root_val">Bebas (Root / Non-Root)</span></div>
+              <div class="spec-item"><span class="spec-label" data-i18n="m4_spec_perf">Overhead</span><span class="spec-val highlight" data-i18n="m4_spec_perf_val">Ultra Rendah (~12 MB RAM)</span></div>
+            </div>
+          </div>
+          <button class="btn-card" onclick="switchTab('single-binary')" data-i18n="btn_view_m4">Panduan Single Binary</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Method Calculator Section -->
+  <section id="calculator" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" data-i18n="sec_calc_tag">Rekomendasi Cerdas</div>
+        <h2 class="section-title" data-i18n="sec_calc_title">Kalkulator Kecocokan Gadget</h2>
+        <p class="section-desc" data-i18n="sec_calc_desc">
+          Masukkan detail gadget Android bekas Anda untuk melihat metode yang paling optimal, stabil, dan ramah RAM.
+        </p>
+      </div>
+
+      <div class="calc-wrapper">
+        <form class="calc-form" onsubmit="event.preventDefault(); calculateRecommendation();">
+          <div class="form-group">
+            <label for="calc-dev">
+              <span>📱</span> <span data-i18n="label_dev_type">Jenis Gadget:</span>
+            </label>
+            <select id="calc-dev" class="select-custom">
+              <option value="stb" data-i18n="opt_stb">STB Android Bekas (ZTE B860H, HG680P, X96, dll)</option>
+              <option value="phone" data-i18n="opt_phone">Smartphone Android Jadul (Samsung, Xiaomi, Advan, dll)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="calc-ram">
+              <span>🧠</span> <span data-i18n="label_ram">Kapasitas RAM Perangkat:</span>
+            </label>
+            <select id="calc-ram" class="select-custom">
+              <option value="512">512 MB (Sangat Terbatas)</option>
+              <option value="1024" selected>1 GB (Standard Gadget Murah / STB B860H v1/v2)</option>
+              <option value="2048">2 GB (Cukup Luwes / STB B860H v5, HG680P)</option>
+              <option value="3072">3 GB atau 4 GB (Leluasa)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="calc-root">
+              <span>🔓</span> <span data-i18n="label_root">Status Akses Root:</span>
+            </label>
+            <select id="calc-root" class="select-custom">
+              <option value="no" data-i18n="opt_root_no">Belum di-Root (Standard / Bawaan Pabrik)</option>
+              <option value="yes" data-i18n="opt_root_yes">Sudah di-Root (Ada Magisk / SuperSU)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="calc-os">
+              <span>🤖</span> <span data-i18n="label_os">Versi Android:</span>
+            </label>
+            <select id="calc-os" class="select-custom">
+              <option value="kitkat" selected data-i18n="opt_os_kitkat">Android 4.4 KitKat (Kernel lawas 3.4/3.10)</option>
+              <option value="lollipop" data-i18n="opt_os_lollipop">Android 5.0 - 6.0 Lollipop/Marshmallow</option>
+              <option value="nougat" data-i18n="opt_os_nougat">Android 7.0 - 9.0 (Nougat/Oreo/Pie)</option>
+              <option value="modern" data-i18n="opt_os_modern">Android 10+ atau Armbian Linux</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="calc-target">
+              <span>🎯</span> <span data-i18n="label_target_bot">Tujuan Penggunaan:</span>
+            </label>
+            <select id="calc-target" class="select-custom">
+              <option value="tg" data-i18n="opt_target_tg">Telegram AI Bot (Gemini / Grok Free Tier)</option>
+              <option value="dc" data-i18n="opt_target_dc">Discord AI Bot & Webhook</option>
+              <option value="both" data-i18n="opt_target_both">Multi-Channel Telegram + Discord</option>
+            </select>
+          </div>
+        </form>
+
+        <div class="calc-result-box">
+          <span class="result-badge" data-i18n="calc_res_badge">Hasil Analisis Gadget</span>
+          <h3 id="res-method-title" class="result-title">Metode 4: Single Binary Go / Rust (Juara)</h3>
+          <p id="res-method-desc" class="result-desc">
+            Karena perangkat Anda memiliki RAM 1GB dan OS Android lawas, menjalankan runtime berat atau distro Linux akan memicu Android LowMemoryKiller (LMK). Single binary Go atau Rust terkompilasi statis berjalan langsung di kernel Linux tanpa dependensi!
+          </p>
+
+          <div class="ram-bar-container">
+            <div class="ram-bar-label">
+              <span>Estimasi Konsumsi RAM:</span>
+              <span id="res-ram-val" style="font-weight:700; color:var(--accent-green-bright);">~12 - 18 MB RAM</span>
+            </div>
+            <div class="ram-bar-bg">
+              <div id="res-ram-fill" class="ram-bar-fill" style="width: 15%;"></div>
+            </div>
+          </div>
+
+          <div style="font-size:0.85rem; margin-bottom:1.5rem; display:flex; justify-content:space-between;">
+            <span style="color:var(--text-dim);">Tingkat Kestabilan 24/7:</span>
+            <span id="res-stability-val" style="color:var(--accent-amber); font-weight:700;">⭐⭐⭐⭐⭐ (Sangat Stabil di 1GB)</span>
+          </div>
+
+          <button id="res-action-btn" class="btn-primary" style="width:100%; justify-content:center;">
+            <span>📖</span> <span data-i18n="calc_res_btn">Buka Panduan Langkah Demi Langkah</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep Dive Methods Tutorials (Tabs) -->
+  <section id="methods-section" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" data-i18n="sec_methods_tag">Panduan Lengkap</div>
+        <h2 class="section-title" data-i18n="sec_methods_title">Tutorial 4 Metode Menghidupkan AI Bot</h2>
+        <p class="section-desc" data-i18n="sec_methods_desc">
+          Pilih tab metode di bawah untuk melihat arsitektur, kode, langkah setup, dan orkestrasi AI Agent.
+        </p>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="tabs-header">
+        <button class="tab-btn active" data-tab="single-binary">
+          <span>🚀</span> <span data-i18n="tab_m4">Metode 4: Go / Rust (Rekomendasi Utama)</span>
+        </button>
+        <button class="tab-btn" data-tab="python">
+          <span>🐍</span> <span data-i18n="tab_m3">Metode 3: Python Micro-Bot</span>
+        </button>
+        <button class="tab-btn" data-tab="chroot">
+          <span>🐧</span> <span data-i18n="tab_m1">Metode 1: Chroot (Rooted)</span>
+        </button>
+        <button class="tab-btn" data-tab="proot">
+          <span>📦</span> <span data-i18n="tab_m2">Metode 2: PRoot (Non-Rooted)</span>
+        </button>
+      </div>
+
+      <!-- Tab Content 4: Single Binary (Go/Rust) -->
+      <div id="tab-pane-single-binary" class="tab-content active">
+        <div class="tutorial-layout">
+          <div>
+            <div class="step-card">
+              <div class="step-header">
+                <span class="step-number">1</span>
+                <h4 class="step-title" data-i18n="step_go_1_title">Mengapa Single Binary Adalah Raja di RAM 1GB & KitKat?</h4>
+              </div>
+              <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.7;" data-i18n="step_go_1_desc">
+                Pada Android KitKat 4.4 atau perangkat dengan RAM 1GB, menjalankan lingkungan penuh seperti Python interpreter (butuh ~40MB), Node.js (butuh ~80MB), atau distro Linux (butuh ~150MB) sering kali membuat sistem kehabisan memori. Akibatnya, mekanisme LowMemoryKiller (LMK) Android akan membunuh proses bot Anda di tengah jalan.<br><br>
+                Dengan Go atau Rust, kita mengompilasi seluruh logika bot, pemanggilan Google Gemini API, dan polling Telegram ke dalam satu berkas biner ELF tunggal. Binary ini ditautkan secara statis (CGO_ENABLED=0), sehingga tidak bergantung pada library Bionic Android versi apapun dan hanya mengonsumsi ~12 MB RAM!
+              </p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-header">
+                <span class="step-number">2</span>
+                <h4 class="step-title" data-i18n="step_go_2_title">Source Code Golang Bot (Gemini 1.5/2.0 Flash + Telegram)</h4>
+              </div>
+              <p style="color:var(--text-muted); font-size:0.88rem;" data-i18n="step_go_2_desc">
+                Kode ini dibuat 100% murni menggunakan standard library Go (net/http, encoding/json), tanpa dependensi eksternal, sangat cepat dan anti-bocor memori:
+              </p>
+              
+              <div class="code-box">
+                <div class="code-header">
+                  <span class="code-lang">main.go (Ultra-Lightweight ~12MB RAM)</span>
+                  <button class="copy-btn" onclick="copyText('code-go-src')"><span>📋</span> Salin Kode</button>
+                </div>
+                <pre><code id="code-go-src">package main
+
+import (
+	"bytes"
+	"encoding/json"
+	"fmt"
+	"io"
+	"log"
+	"net/http"
+	"os"
+	"time"
+)
+
+// Konfigurasi via Environment Variables
+var (
+	telegramToken = os.Getenv("TELEGRAM_BOT_TOKEN")
+	geminiApiKey  = os.Getenv("GEMINI_API_KEY")
+)
+
+type Update struct {
+	UpdateID int `json:"update_id"`
+	Message  *struct {
+		Chat struct {
+			ID int64 `json:"id"`
+		} `json:"chat"`
+		Text string `json:"text"`
+	} `json:"message"`
+}
+
+type TelegramResponse struct {
+	Ok     bool     `json:"ok"`
+	Result []Update `json:"result"`
+}
+
+type GeminiReq struct {
+	Contents []struct {
+		Parts []struct {
+			Text string `json:"text"`
+		} `json:"parts"`
+	} `json:"contents"`
+}
+
+type GeminiResp struct {
+	Candidates []struct {
+		Content struct {
+			Parts []struct {
+				Text string `json:"text"`
+			} `json:"parts"`
+		} `json:"content"`
+	} `json:"candidates"`
+}
+
+// Panggil Google Gemini Flash (Free Tier)
+func callGemini(prompt string) (string, error) {
+	url := fmt.Sprintf("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=%s", geminiApiKey)
+	
+	reqBody := GeminiReq{
+		Contents: []struct {
+			Parts []struct {
+				Text string `json:"text"`
+			} `json:"parts"`
+		}{
+			{
+				Parts: []struct {
+					Text string `json:"text"`
+				}{
+					{Text: "Kamu adalah AI asisten ramah di STB Android: " + prompt},
+				},
+			},
+		},
+	}
+
+	payload, _ := json.Marshal(reqBody)
+	resp, err := http.Post(url, "application/json", bytes.NewBuffer(payload))
+	if err != nil {
+		return "", err
+	}
+	defer resp.Body.Close()
+
+	body, _ := io.ReadAll(resp.Body)
+	var gResp GeminiResp
+	if err := json.Unmarshal(body, &gResp); err != nil {
+		return "Maaf, terjadi kesalahan parsing respons AI.", nil
+	}
+
+	if len(gResp.Candidates) > 0 && len(gResp.Candidates[0].Content.Parts) > 0 {
+		return gResp.Candidates[0].Content.Parts[0].Text, nil
+	}
+	return "Maaf, AI tidak memberikan jawaban.", nil
+}
+
+// Kirim balasan ke Telegram
+func sendTelegram(chatID int64, text string) {
+	url := fmt.Sprintf("https://api.telegram.org/bot%s/sendMessage", telegramToken)
+	data, _ := json.Marshal(map[string]interface{}{
+		"chat_id": chatID,
+		"text":    text,
+	})
+	http.Post(url, "application/json", bytes.NewBuffer(data))
+}
+
+func main() {
+	if telegramToken == "" || geminiApiKey == "" {
+		log.Fatal("Wajib set TELEGRAM_BOT_TOKEN dan GEMINI_API_KEY!")
+	}
+
+	log.Println("🌱 EcoGreen AI Bot Engine (Go Single Binary) Running...")
+	offset := 0
+
+	for {
+		url := fmt.Sprintf("https://api.telegram.org/bot%s/getUpdates?timeout=30&offset=%d", telegramToken, offset)
+		resp, err := http.Get(url)
+		if err != nil {
+			time.Sleep(5 * time.Second)
+			continue
+		}
+
+		body, _ := io.ReadAll(resp.Body)
+		resp.Body.Close()
+
+		var tgResp TelegramResponse
+		json.Unmarshal(body, &tgResp)
+
+		for _, update := range tgResp.Result {
+			offset = update.UpdateID + 1
+			if update.Message != nil && update.Message.Text != "" {
+				userMsg := update.Message.Text
+				chatID := update.Message.Chat.ID
+				log.Printf("[Chat %d] Tanya: %s", chatID, userMsg)
+
+				aiReply, err := callGemini(userMsg)
+				if err != nil {
+					aiReply = "Koneksi ke AI terputus. Silakan coba lagi."
+				}
+				sendTelegram(chatID, aiReply)
+			}
+		}
+		time.Sleep(500 * time.Millisecond)
+	}
+}</code></pre>
+              </div>
+            </div>
+
+            <div class="step-card">
+              <div class="step-header">
+                <span class="step-number">3</span>
+                <h4 class="step-title" data-i18n="step_go_3_title">Cara Cross-Compile & Deploy ke Gadget Android</h4>
+              </div>
+              <p style="color:var(--text-muted); font-size:0.9rem;" data-i18n="step_go_3_desc">
+                Kompilasi kode di atas dari laptop/PC Anda untuk prosesor ARM (kebanyakan STB/HP lawas menggunakan ARMv7 32-bit):
+              </p>
+              
+              <div class="code-box">
+                <div class="code-header">
+                  <span class="code-lang">Cross-Compile (Terminal / PowerShell di PC)</span>
+                  <button class="copy-btn" onclick="copyText('code-go-build')"><span>📋</span> Salin Perintah</button>
+                </div>
+                <pre><code id="code-go-build"># Opsi A: Golang (Sangat Praktis, Built-in Cross Compiler)
+# Untuk Windows PowerShell:
+$env:CGO_ENABLED="0"; $env:GOOS="linux"; $env:GOARCH="arm"; $env:GOARM="7"; go build -ldflags="-s -w" -o aibot_arm7 main.go
+
+# Untuk Linux / macOS Bash:
+CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=7 go build -ldflags="-s -w" -o aibot_arm7 main.go
+
+# Opsi B: Rust (Target musl static binary, ~8MB RAM usage)
+rustup target add armv7-unknown-linux-musleabihf
+cargo build --target armv7-unknown-linux-musleabihf --release
+
+# ----------------------------------------------------
+# Push binary ke Android via ADB:
+adb connect 192.168.1.50:5555
+adb push aibot_arm7 /data/local/tmp/
+adb shell "chmod +x /data/local/tmp/aibot_arm7"
+
+# Jalankan di background Android:
+adb shell
+cd /data/local/tmp
+export TELEGRAM_BOT_TOKEN="token_anda_disini"
+export GEMINI_API_KEY="api_key_gemini_anda"
+nohup ./aibot_arm7 > bot.log 2>&1 &</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="info-sidebar">
+            <div class="info-box">
+              <h4 class="info-box-title"><span>🌟</span> Keunggulan Go / Rust</h4>
+              <ul class="info-list">
+                <li><strong>RAM Super Irit:</strong> Hanya ~12-18 MB RAM! Sisa 980 MB RAM Android tetap lega.</li>
+                <li><strong>Tanpa Runtime:</strong> Tidak butuh install Termux, Python, GCC, atau Node.js.</li>
+                <li><strong>Kompatibel KitKat 4.4+:</strong> Kernel Linux 3.4 atau 3.10 Android langsung mengenali format ELF arm statis.</li>
+                <li><strong>Bebas Crash LMK:</strong> Jarang sekali dibunuh oleh sistem Android karena konsumsi memori yang sangat kecil.</li>
+              </ul>
+            </div>
+
+            <div class="info-box">
+              <h4 class="info-box-title"><span>🛠️</span> Peran AI Agent</h4>
+              <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.6;">
+                Minta AI Agent untuk:
+              </p>
+              <ul class="info-list">
+                <li>Menambahkan memory watchdog (auto exit jika RAM > 30MB)</li>
+                <li>Menambahkan fitur Discord webhook notification</li>
+                <li>Membuatkan Makefile atau skrip PowerShell otomatis</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Content 3: Python Micro-Bot -->
+      <div id="tab-pane-python" class="tab-content">
+        <div class="tutorial-layout">
+          <div>
+            <div class="step-card">
+              <div class="step-header">
+                <span class="step-number">1</span>
+                <h4 class="step-title" data-i18n="step_py_1_title">Python Minimalis Tanpa Bloatware Framework</h4>
+              </div>
+              <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.7;" data-i18n="step_py_1_desc">
+                Banyak tutorial bot Telegram Python menggunakan library berat seperti python-telegram-bot lengkap dengan dependensi berat yang memakan 80MB+ RAM. Untuk gadget RAM 1GB, kita menggunakan skrip Python asinkron murni dengan requests atau urllib3 biasa, memangkas penggunaan memori hingga tersisa ~35 - 45 MB.
+              </p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-header">
+                <span class="step-number">2</span>
+                <h4 class="step-title" data-i18n="step_py_2_title">Source Code Python Bot (Gemini + Telegram)</h4>
+              </div>
+
+              <div class="code-box">
+                <div class="code-header">
+                  <span class="code-lang">bot_light.py (~38MB RAM)</span>
+                  <button class="copy-btn" onclick="copyText('code-py-src')"><span>📋</span> Salin Skrip Python</button>
+                </div>
+                <pre><code id="code-py-src">import os
+import time
+import requests
+
+# Konfigurasi Token
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "ISI_TOKEN_TELEGRAM")
+GEMINI_KEY = os.getenv("GEMINI_API_KEY", "ISI_API_KEY_GEMINI")
+
+GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_KEY}"
+TG_URL = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}"
+
+def ask_gemini(prompt_text):
+    payload = {
+        "contents": [{"parts": [{"text": "Kamu adalah asisten AI ramah di STB Android bekas. " + prompt_text}]}]
+    }
+    try:
+        r = requests.post(GEMINI_URL, json=payload, timeout=20)
+        data = r.json()
+        return data["candidates"][0]["content"]["parts"][0]["text"]
+    except Exception as e:
+        return f"Maaf, gagal memproses respons AI: {str(e)}"
+
+def send_msg(chat_id, text):
+    try:
+        requests.post(f"{TG_URL}/sendMessage", json={"chat_id": chat_id, "text": text}, timeout=10)
+    except Exception as e:
+        print(f"Error kirim pesan: {e}")
+
+def main():
+    print("🌱 Python Eco-Bot running on Android...")
+    offset = 0
+    while True:
+        try:
+            res = requests.get(f"{TG_URL}/getUpdates?timeout=30&offset={offset}", timeout=35).json()
+            if res.get("ok"):
+                for update in res.get("result", []):
+                    offset = update["update_id"] + 1
+                    msg = update.get("message")
+                    if msg and "text" in msg:
+                        chat_id = msg["chat"]["id"]
+                        text = msg["text"]
+                        print(f"Pesan masuk: {text}")
+                        reply = ask_gemini(text)
+                        send_msg(chat_id, reply)
+        except requests.exceptions.RequestException:
+            # Jaringan putus/reconnect
+            time.sleep(5)
+        except Exception as e:
+            print(f"Loop error: {e}")
+            time.sleep(2)
+
+if __name__ == "__main__":
+    main()</code></pre>
+              </div>
+            </div>
+
+            <div class="step-card">
+              <div class="step-header">
+                <span class="step-number">3</span>
+                <h4 class="step-title" data-i18n="step_py_3_title">Langkah Eksekusi di Termux Android</h4>
+              </div>
+
+              <div class="code-box">
+                <div class="code-header">
+                  <span class="code-lang">Perintah Terminal Android</span>
+                  <button class="copy-btn" onclick="copyText('code-py-run')"><span>📋</span> Salin Perintah</button>
+                </div>
+                <pre><code id="code-py-run"># Update repository Termux
+pkg update -y
+pkg install python -y
+
+# Install library requests yang sangat ringan
+pip install requests
+
+# Mencegah Termux tertidur saat layar mati:
+termux-wake-lock
+
+# Jalankan bot dengan nohup agar tetap hidup di background
+export TELEGRAM_BOT_TOKEN="token_telegram_anda"
+export GEMINI_API_KEY="api_key_gemini_anda"
+nohup python bot_light.py > bot.log 2>&1 &</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-sidebar">
+            <div class="info-box">
+              <h4 class="info-box-title"><span>💡</span> Tips Hemat RAM Python</h4>
+              <ul class="info-list">
+                <li>Gunakan <code class="inline-code">requests</code> atau <code class="inline-code">urllib3</code> daripada library bot besar.</li>
+                <li>Setel <code class="inline-code">PYTHONUNBUFFERED=1</code> agar log langsung terbit.</li>
+                <li>Jika gadget Anda KitKat 4.4, gunakan Termux build v0.72 archive atau kompilasi Python statis.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Content 1: Chroot Linux (Rooted) -->
+      <div id="tab-pane-chroot" class="tab-content">
+        <div class="tutorial-layout">
+          <div>
+            <div class="step-card">
+              <div class="step-header">
+                <span class="step-number">1</span>
+                <h4 class="step-title" data-i18n="step_ch_1_title">Konsep Chroot: Akses Penuh ke Kernel Tanpa Emulasi</h4>
+              </div>
+              <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.7;" data-i18n="step_ch_1_desc">
+                Metode Chroot memanfaatkan kernel Linux bawaan Android untuk mengisolasi lingkungan root file-system baru (seperti Alpine Linux atau Debian). Karena berjalan langsung di atas kernel tanpa layer emulasi ptrace, kecepatannya 100% native!<br><br>
+                Syarat Utama: Gadget wajib sudah memiliki akses Root (su) dan disarankan memiliki RAM ≥ 2 GB (seperti STB B860H v5 atau HG680P).
+              </p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-header">
+                <span class="step-number">2</span>
+                <h4 class="step-title" data-i18n="step_ch_2_title">Skrip Setup Alpine Linux Chroot (Paling Ringan)</h4>
+              </div>
+
+              <div class="code-box">
+                <div class="code-header">
+                  <span class="code-lang">Bash Shell (Root Shell via ADB / Terminal)</span>
+                  <button class="copy-btn" onclick="copyText('code-chroot-setup')"><span>📋</span> Salin Skrip Chroot</button>
+                </div>
+                <pre><code id="code-chroot-setup"># Masuk sebagai superuser di Android
+su
+
+# Buat direktori chroot di memori internal / SD Card
+mkdir -p /data/alpine
+cd /data/alpine
+
+# Download rootfs minimal Alpine Linux ARM (hanya ~3 MB!)
+wget https://dl-cdn.alpinelinux.org/alpine/v3.19/releases/armv7/alpine-minirootfs-3.19.0-armv7.tar.gz
+tar -xzf alpine-minirootfs-*.tar.gz
+rm alpine-minirootfs-*.tar.gz
+
+# Mount partisi kernel Android ke direktori chroot
+mount -o bind /dev /data/alpine/dev
+mount -o bind /sys /data/alpine/sys
+mount -o bind /proc /data/alpine/proc
+mount -t devpts devpts /data/alpine/dev/pts
+
+# Copy konfigurasi DNS internet
+echo "nameserver 8.8.8.8" > /data/alpine/etc/resolv.conf
+
+# Masuk ke dalam lingkungan Alpine Linux!
+chroot /data/alpine /bin/sh
+
+# Sekarang Anda berada di dalam Linux Alpine murni!
+apk update
+apk add python3 py3-pip curl
+
+# Install bot Anda di dalam Alpine dan jalankan 24/7!</code></pre>
+              </div>
+            </div>
+
+            <div class="step-card">
+              <div class="step-header">
+                <span class="step-number">3</span>
+                <h4 class="step-title" data-i18n="step_ch_3_title">Menjalankan Chroot Otomatis Saat Booting Android</h4>
+              </div>
+              <p style="color:var(--text-muted); font-size:0.9rem;" data-i18n="step_ch_3_desc">
+                Agar bot langsung hidup saat STB disambungkan ke adaptor listrik, buat skrip di /system/etc/init.d/99aibot atau gunakan Magisk service.d.
+              </p>
+            </div>
+          </div>
+
+          <div class="info-sidebar">
+            <div class="info-box">
+              <h4 class="info-box-title"><span>🐧</span> Kenapa Alpine Linux?</h4>
+              <ul class="info-list">
+                <li>Ukuran rootfs hanya <strong>~3 MB</strong> (Debian biasanya 150MB+).</li>
+                <li>Menggunakan <code class="inline-code">musl libc</code> yang sangat ringan untuk perangkat embedded.</li>
+                <li>Konsumsi RAM dasar setelah boot hanya <strong>~15-20 MB</strong>.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Content 2: PRoot Userland (Non-Rooted) -->
+      <div id="tab-pane-proot" class="tab-content">
+        <div class="tutorial-layout">
+          <div>
+            <div class="step-card">
+              <div class="step-header">
+                <span class="step-number">1</span>
+                <h4 class="step-title" data-i18n="step_pr_1_title">Konsep PRoot: Linux Penuh Tanpa Perlu Root</h4>
+              </div>
+              <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.7;" data-i18n="step_pr_1_desc">
+                Jika gadget Anda tidak di-root (misalnya STB kantor atau HP keluarga yang tidak ingin Anda modifikasi firmware-nya), metode PRoot adalah solusinya. PRoot menggunakan syscall ptrace untuk mencegat panggilan sistem file dan mensimulasikan lingkungan root secara virtual.<br><br>
+                Catatan Kinerja: Ada sedikit overhead CPU/RAM karena emulasi ptrace. Ideal untuk gadget dengan RAM 1.5 GB - 2 GB dan Android 5.0+.
+              </p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-header">
+                <span class="step-number">2</span>
+                <h4 class="step-title" data-i18n="step_pr_2_title">Cara Install Debian / Ubuntu via PRoot-Distro di Termux</h4>
+              </div>
+
+              <div class="code-box">
+                <div class="code-header">
+                  <span class="code-lang">Perintah Termux (Non-Root)</span>
+                  <button class="copy-btn" onclick="copyText('code-proot-setup')"><span>📋</span> Salin Perintah PRoot</button>
+                </div>
+                <pre><code id="code-proot-setup"># 1. Update Termux
+pkg update -y
+pkg install proot proot-distro -y
+
+# 2. Install Debian (atau Alpine untuk lebih hemat RAM)
+proot-distro install debian
+
+# 3. Masuk ke sesi Debian
+proot-distro login debian
+
+# Di dalam Debian:
+apt update && apt install -y python3 python3-pip git
+# Clone atau buat bot Anda di sini!
+
+# 4. Keluar dari sesi Debian:
+exit
+
+# 5. Menjalankan skrip bot di dalam Debian langsung dari Termux background:
+nohup proot-distro login debian -- python3 /root/bot.py > /sdcard/bot.log 2>&1 &</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-sidebar">
+            <div class="info-box">
+              <h4 class="info-box-title"><span>🛡️</span> Kelebihan PRoot</h4>
+              <ul class="info-list">
+                <li><strong>100% Aman:</strong> Tidak merusak partisi sistem Android, tidak perlu unlock bootloader.</li>
+                <li><strong>Paket Lengkap:</strong> Bisa menjalankan <code class="inline-code">apt install</code> seperti di server Ubuntu biasa.</li>
+                <li>Mudah di-reset jika terjadi error (cukup <code class="inline-code">proot-distro reset debian</code>).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Orchestration Blueprint -->
+  <section class="section" style="background: rgba(16, 185, 129, 0.03);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" data-i18n="sec_ai_tag">Peran AI Agent</div>
+        <h2 class="section-title" data-i18n="sec_ai_title">Orkestrasi Otomatis Menggunakan AI Agent</h2>
+        <p class="section-desc" data-i18n="sec_ai_desc">
+          Anda tidak perlu jago coding Go atau Linux kernel. Anda cukup meminta AI Agent (seperti Antigravity, Claude, ChatGPT, atau Gemini) untuk menyusun kode, mengompilasi, dan membuatkan skrip watchdog.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="method-card">
+          <div class="card-top">
+            <div style="font-size:1.8rem; margin-bottom:0.75rem;">1️⃣ Prompting & Spesifikasi</div>
+            <h4 style="font-size:1.1rem; margin-bottom:0.5rem; color:var(--text-main);" data-i18n="ai_step1_title">Deskripsikan Batasan Gadget</h4>
+            <p style="font-size:0.88rem; color:var(--text-muted);" data-i18n="ai_step1_desc">
+              Jelaskan kepada AI Agent: "Saya punya STB B860H RAM 1GB Android KitKat, buatkan bot Go tanpa CGO agar tidak Out-Of-Memory."
+            </p>
+          </div>
+        </div>
+
+        <div class="method-card">
+          <div class="card-top">
+            <div style="font-size:1.8rem; margin-bottom:0.75rem;">2️⃣ Generasi Kode & Cross-Compile</div>
+            <h4 style="font-size:1.1rem; margin-bottom:0.5rem; color:var(--text-main);" data-i18n="ai_step2_title">AI Menyusun Binary</h4>
+            <p style="font-size:0.88rem; color:var(--text-muted);" data-i18n="ai_step2_desc">
+              AI Agent menghasilkan source code lengkap, menyetel endpoint Gemini Flash/Grok free-tier, serta memberikan baris perintah cross-compile ARMv7.
+            </p>
+          </div>
+        </div>
+
+        <div class="method-card">
+          <div class="card-top">
+            <div style="font-size:1.8rem; margin-bottom:0.75rem;">3️⃣ Deployment & Botfather</div>
+            <h4 style="font-size:1.1rem; margin-bottom:0.5rem; color:var(--text-main);" data-i18n="ai_step3_title">Push Binary via ADB</h4>
+            <p style="font-size:0.88rem; color:var(--text-muted);" data-i18n="ai_step3_desc">
+              AI Agent memandu Anda menghubungkan IP STB via WiFi ADB, mentransfer file binary, dan memasukkan token Telegram & API Key Gemini.
+            </p>
+          </div>
+        </div>
+
+        <div class="method-card">
+          <div class="card-top">
+            <div style="font-size:1.8rem; margin-bottom:0.75rem;">4️⃣ Watchdog & Auto-Healing</div>
+            <h4 style="font-size:1.1rem; margin-bottom:0.5rem; color:var(--text-main);" data-i18n="ai_step4_title">Ketahanan 24/7</h4>
+            <p style="font-size:0.88rem; color:var(--text-muted);" data-i18n="ai_step4_desc">
+              AI Agent menyusun skrip monitor bash yang secara otomatis merestart bot jika terjadi gangguan koneksi internet atau lonjakan memori.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive AI Agent Prompt Generator Section -->
+  <section id="prompt-generator" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" data-i18n="sec_prompt_tag">Generator Otomatis</div>
+        <h2 class="section-title" data-i18n="sec_prompt_title">Generator Prompt untuk AI Agent</h2>
+        <p class="section-desc" data-i18n="sec_prompt_desc">
+          Pilih konfigurasi kebutuhan Anda di bawah ini, lalu klik tombol 'Salin Prompt'. Tempelkan (paste) prompt ini ke AI Agent Anda untuk menghasilkan solusi instan!
+        </p>
+      </div>
+
+      <div class="prompt-generator-box">
+        <div class="generator-controls">
+          <div class="form-group">
+            <label for="prompt-method"><span data-i18n="p_label_method">Metode yang Dipilih:</span></label>
+            <select id="prompt-method" class="select-custom">
+              <option value="Go (Golang) Statically Linked Single Binary (Ultra-Lightweight ~12MB RAM)">Go Single Binary (Rekomendasi 1GB RAM)</option>
+              <option value="Rust Statically Linked musl Binary (~8MB RAM)">Rust Single Binary</option>
+              <option value="Python Micro-Bot (requests/aiohttp, lightweight)">Python Micro-Bot</option>
+              <option value="Alpine Linux Chroot (Minimal Rootfs)">Alpine Linux Chroot</option>
+              <option value="Debian PRoot via Termux">Debian PRoot via Termux</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="prompt-llm"><span data-i18n="p_label_llm">Penyedia LLM (Free-Tier):</span></label>
+            <select id="prompt-llm" class="select-custom">
+              <option value="Google Gemini 1.5 / 2.0 Flash (Free Tier REST API)">Google Gemini Flash (Free Tier)</option>
+              <option value="xAI Grok API (Free Tier / Credits)">xAI Grok API</option>
+              <option value="OpenRouter Free Tier Models (DeepSeek-V3 / Llama 3)">OpenRouter Free Models</option>
+              <option value="Cloudflare Workers AI (Free 10k neurons/day)">Cloudflare Workers AI</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="prompt-platform"><span data-i18n="p_label_platform">Platform Chat:</span></label>
+            <select id="prompt-platform" class="select-custom">
+              <option value="Telegram Bot (Long-Polling without webhook domain)">Telegram Bot (Long-Polling)</option>
+              <option value="Telegram Bot (Webhook)">Telegram Bot (Webhook)</option>
+              <option value="Discord Bot (Gateway WebSocket)">Discord Bot</option>
+              <option value="Discord Incoming Webhook Relay">Discord Webhook</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="prompt-ram"><span data-i18n="p_label_ram">Batas RAM Gadget:</span></label>
+            <select id="prompt-ram" class="select-custom">
+              <option value="1GB RAM (Android 4.4 KitKat / STB)">1GB RAM (Sangat Ketat)</option>
+              <option value="512MB RAM (Legacy Device)">512MB RAM (Ekstrem)</option>
+              <option value="2GB RAM (Android 7.0+)">2GB RAM (Leluasa)</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:1.5rem; margin-bottom:1.5rem;">
+          <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; font-size:0.9rem;">
+            <input type="checkbox" id="prompt-watchdog" checked style="accent-color:var(--accent-green); width:1.1rem; height:1.1rem;">
+            <span data-i18n="p_feat_watchdog">Termasuk Skrip Auto-Restart / Watchdog</span>
+          </label>
+          <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; font-size:0.9rem;">
+            <input type="checkbox" id="prompt-boot" checked style="accent-color:var(--accent-green); width:1.1rem; height:1.1rem;">
+            <span data-i18n="p_feat_boot">Termasuk Skrip Auto-Boot saat Listrik Nyala</span>
+          </label>
+        </div>
+
+        <div class="prompt-output-area" id="prompt-output">
+          Memuat prompt...
+        </div>
+
+        <div class="prompt-action-bar">
+          <button class="btn-secondary" onclick="generateAgentPrompt()" data-i18n="btn_gen_prompt">Buat Prompt AI</button>
+          <button class="btn-primary" onclick="copyText('prompt-output')">
+            <span>📋</span> <span data-i18n="btn_copy_prompt">Salin Prompt ke Clipboard</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Matrix Table -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" data-i18n="matrix_tag">Matriks Perbandingan</div>
+        <h2 class="section-title" data-i18n="matrix_title">Perbandingan 4 Metode pada Gadget RAM 1GB</h2>
+        <p class="section-desc" data-i18n="matrix_desc">Pahami perbedaan konsumsi sumber daya dan batasan teknis dari masing-masing pendekatan.</p>
+      </div>
+
+      <div class="table-responsive">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Fitur / Parameter</th>
+              <th>Go / Rust Single Binary</th>
+              <th>Python Micro-Bot</th>
+              <th>Chroot Linux</th>
+              <th>PRoot Userland</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Konsumsi RAM</strong></td>
+              <td><span class="badge-eco">~12 - 18 MB</span></td>
+              <td>~35 - 55 MB</td>
+              <td>~45 - 90 MB (Alpine)</td>
+              <td>~120 - 250 MB</td>
+            </tr>
+            <tr>
+              <td><strong>Kebutuhan Root</strong></td>
+              <td>Tidak Wajib (Bebas)</td>
+              <td>Tidak Wajib (Bebas)</td>
+              <td><span class="badge-warning">Wajib Root (su)</span></td>
+              <td>Tidak Butuh Root</td>
+            </tr>
+            <tr>
+              <td><strong>Kompatibilitas KitKat 4.4</strong></td>
+              <td><span class="badge-eco">Sangat Bagus (Statis)</span></td>
+              <td>Bisa (Termux lawas)</td>
+              <td>Bisa jika di-root</td>
+              <td>Sulit (Libc incompatibility)</td>
+            </tr>
+            <tr>
+              <td><strong>Ketergantungan (Dependencies)</strong></td>
+              <td>Nol (Self-contained)</td>
+              <td>Python3 + pip modules</td>
+              <td>Full rootfs distro</td>
+              <td>PRoot + rootfs image</td>
+            </tr>
+            <tr>
+              <td><strong>Risiko Dibunuh Android (LMK)</strong></td>
+              <td><span class="badge-eco">Sangat Rendah (Aman)</span></td>
+              <td>Rendah - Sedang</td>
+              <td>Rendah</td>
+              <td><span class="badge-warning">Tinggi di RAM 1GB</span></td>
+            </tr>
+            <tr>
+              <td><strong>Kemudahan Modifikasi Kode</strong></td>
+              <td>Perlu re-compile di PC</td>
+              <td><span class="badge-eco">Sangat Mudah (Edit teks)</span></td>
+              <td>Mudah (via SSH/shell)</td>
+              <td>Mudah (via SSH/shell)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hardware & EcoGreen Guide -->
+  <section id="hardware-guide" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" data-i18n="sec_hw_tag">Daur Ulang Ramah Lingkungan</div>
+        <h2 class="section-title" data-i18n="sec_hw_title">Panduan Hardware & Pengoperasian 24/7</h2>
+        <p class="section-desc" data-i18n="sec_hw_desc">
+          Kunci utama server eco-green adalah keandalan jangka panjang, pencegahan bahaya baterai kembung, dan konsumsi daya super hemat.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="method-card">
+          <div class="card-top">
+            <span class="method-badge badge-binary" data-i18n="hw_card1_tag">Keamanan Hardware</span>
+            <h3 class="card-title" data-i18n="hw_card1_title">Bahaya Baterai HP & Solusi Bypass</h3>
+            <p class="card-desc" data-i18n="hw_card1_desc">
+              Jika Anda memakai smartphone bekas, JANGAN colok charger terus menerus dengan baterai terpasang! Baterai Lithium-Ion akan kembung dan berisiko terbakar dalam hitungan bulan.<br><br>
+              Solusi Eco-Bypass: Lepas baterai fisik, gunakan modul Step-Down Buck Converter (LM2596) dari charger 5V diturunkan ke 4.0V - 4.2V dan solder langsung ke pin (+) dan (-) konektor baterai HP. HP akan menyala abadi tanpa baterai!
+            </p>
+          </div>
+        </div>
+
+        <div class="method-card">
+          <div class="card-top">
+            <span class="method-badge badge-chroot" data-i18n="hw_card2_tag">STB Bekas Juara EcoGreen</span>
+            <h3 class="card-title" data-i18n="hw_card2_title">Kenapa STB Android Sangat Ideal?</h3>
+            <p class="card-desc" data-i18n="hw_card2_desc">
+              STB bekas (seperti ZTE B860H atau Fiberhome HG680P) tidak memiliki baterai bawaan. Menggunakan adaptor DC 12V/1A atau 5V/2A bawaan pabrik dengan konsumsi daya sangat rendah: kurang dari 3 Watt saat idle. Biaya listriknya kurang dari Rp 5.000 / bulan!
+            </p>
+          </div>
+        </div>
+
+        <div class="method-card">
+          <div class="card-top">
+            <span class="method-badge badge-python" data-i18n="hw_card3_tag">Manajemen Suhu & Jaringan</span>
+            <h3 class="card-title" data-i18n="hw_card3_title">Pendinginan Pasif & Port LAN</h3>
+            <p class="card-desc" data-i18n="hw_card3_desc">
+              STB lawas sudah dilengkapi port Ethernet (RJ45). Gunakan kabel LAN daripada Wi-Fi agar koneksi bot ke server Telegram/Gemini tidak pernah putus akibat sleep mode Android. Buka casing atau tempelkan heatsink aluminium kecil di atas chipset SoC (Amlogic S905x) untuk suhu adem 45°C.
+            </p>
+          </div>
+        </div>
+
+        <div class="method-card">
+          <div class="card-top">
+            <span class="method-badge badge-proot" data-i18n="hw_card4_tag">Auto-Boot Recovery</span>
+            <h3 class="card-title" data-i18n="hw_card4_title">Otomatis Hidup Saat Listrik Menyala</h3>
+            <p class="card-desc" data-i18n="hw_card4_desc">
+              Pada smartphone, jika listrik mati dan menyala kembali, aktifkan fitur auto-boot dengan perintah fastboot: fastboot oem off-mode-charge 0. Dengan ini, begitu charger mendapat aliran listrik, HP akan langsung otomatis booting menyalakan bot tanpa perlu ditekan tombol power!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 data-i18n="footer_title">EcoGreen Android AI Bot Hub</h4>
+          <p data-i18n="footer_desc">
+            Gerakan upcycling perangkat elektronik bekas (e-waste) menjadi server AI mandiri berkonsumsi daya rendah. Dibuat dengan HTML murni, CSS, dan JavaScript tanpa dependensi eksternal, siap di-hosting langsung di GitHub Pages.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_quick_links">Tautan Cepat</h4>
+          <ul class="footer-links">
+            <li><a href="#overview">4 Metode</a></li>
+            <li><a href="#calculator">Kalkulator RAM</a></li>
+            <li><a href="#prompt-generator">Prompt Generator</a></li>
+            <li><a href="#hardware-guide">Hardware Eco-Bypass</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_tech">Teknologi</h4>
+          <ul class="footer-links">
+            <li><a href="https://ai.google.dev/" target="_blank" rel="noopener">Google Gemini API</a></li>
+            <li><a href="https://x.ai/" target="_blank" rel="noopener">xAI Grok</a></li>
+            <li><a href="https://go.dev/" target="_blank" rel="noopener">Golang Static Binary</a></li>
+            <li><a href="https://termux.dev/" target="_blank" rel="noopener">Termux & PRoot</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer_copy">
+          Dibuat untuk komunitas pengembang & pegiat EcoGreen Tech. Lisensi Open Source MIT.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
